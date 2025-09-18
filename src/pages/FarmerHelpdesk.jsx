@@ -8,37 +8,39 @@ function FarmerHelpdesk() {
 
     // Hardcoded supervisors dataset grouped by state and division (mock backend)
     const stateDivisionData = useMemo(() => ({
-        'Madhya Pradesh': [
-            { division: 'Bhopal', name: 'Anil Verma', phone: '+91 9812345670', email: 'anil.verma@farmconnect.in' },
-            { division: 'Indore', name: 'Priya Sharma', phone: '+91 9812345671', email: 'priya.sharma@farmconnect.in' },
-            { division: 'Gwalior', name: 'Rohit Singh', phone: '+91 9812345672', email: 'rohit.singh@farmconnect.in' },
-            { division: 'Jabalpur', name: 'Kavita Jain', phone: '+91 9812345673', email: 'kavita.jain@farmconnect.in' },
-            { division: 'Ujjain', name: 'Vikas Mehta', phone: '+91 9812345674', email: 'vikas.mehta@farmconnect.in' },
-            { division: 'Sagar', name: 'Neha Gupta', phone: '+91 9812345675', email: 'neha.gupta@farmconnect.in' },
-            { division: 'Rewa', name: 'Amit Patel', phone: '+91 9812345676', email: 'amit.patel@farmconnect.in' },
-            { division: 'Ratlam', name: 'Sunita Rao', phone: '+91 9812345677', email: 'sunita.rao@farmconnect.in' }
+        'Madhya Pradesh / मध्य प्रदेश': [
+            { division: 'Bhopal / भोपाल', name: 'Anil Verma / अनिल वर्मा', phone: '+91 9812345670', email: 'anil.verma@farmconnect.in' },
+            { division: 'Indore / इंदौर', name: 'Priya Sharma / प्रिया शर्मा', phone: '+91 9812345671', email: 'priya.sharma@farmconnect.in' },
+            { division: 'Gwalior / ग्वालियर', name: 'Rohit Singh / रोहित सिंह', phone: '+91 9812345672', email: 'rohit.singh@farmconnect.in' },
+            { division: 'Jabalpur / जबलपुर', name: 'Kavita Jain / कविता जैन', phone: '+91 9812345673', email: 'kavita.jain@farmconnect.in' },
+            { division: 'Ujjain / उज्जैन', name: 'Vikas Mehta / विकास मेहता', phone: '+91 9812345674', email: 'vikas.mehta@farmconnect.in' },
+            { division: 'Sagar / सागर', name: 'Neha Gupta / नेहा गुप्ता', phone: '+91 9812345675', email: 'neha.gupta@farmconnect.in' },
+            { division: 'Rewa / रीवा', name: 'Amit Patel / अमित पटेल', phone: '+91 9812345676', email: 'amit.patel@farmconnect.in' },
+            { division: 'Ratlam / रतलाम', name: 'Sunita Rao / सुनीता राव', phone: '+91 9812345677', email: 'sunita.rao@farmconnect.in' }
         ],
-        'Maharashtra': [
-            { division: 'Mumbai', name: 'Suresh Iyer', phone: '+91 9822345670', email: 'suresh.iyer@farmconnect.in' },
-            { division: 'Pune', name: 'Aarti Kulkarni', phone: '+91 9822345671', email: 'aarti.kulkarni@farmconnect.in' },
-            { division: 'Nagpur', name: 'Rahul Deshmukh', phone: '+91 9822345672', email: 'rahul.deshmukh@farmconnect.in' },
-            { division: 'Nashik', name: 'Pooja Joshi', phone: '+91 9822345673', email: 'pooja.joshi@farmconnect.in' },
-            { division: 'Aurangabad', name: 'Manoj Patil', phone: '+91 9822345674', email: 'manoj.patil@farmconnect.in' },
-            { division: 'Kolhapur', name: 'Sneha Gokhale', phone: '+91 9822345675', email: 'sneha.gokhale@farmconnect.in' },
-            { division: 'Solapur', name: 'Nilesh Jagtap', phone: '+91 9822345676', email: 'nilesh.jagtap@farmconnect.in' },
-            { division: 'Amravati', name: 'Meera Phadke', phone: '+91 9822345677', email: 'meera.phadke@farmconnect.in' }
+        'Maharashtra / महाराष्ट्र': [
+            { division: 'Mumbai / मुंबई', name: 'Suresh Iyer / सुरेश अय्यर', phone: '+91 9822345670', email: 'suresh.iyer@farmconnect.in' },
+            { division: 'Pune / पुणे', name: 'Aarti Kulkarni / आर्टी कुलकर्णी', phone: '+91 9822345671', email: 'aarti.kulkarni@farmconnect.in' },
+            { division: 'Nagpur / नागपुर', name: 'Rahul Deshmukh / राहुल देशमुख', phone: '+91 9822345672', email: 'rahul.deshmukh@farmconnect.in' },
+            { division: 'Nashik / नासिक', name: 'Pooja Joshi / पूजा जोशी', phone: '+91 9822345673', email: 'pooja.joshi@farmconnect.in' },
+            { division: 'Aurangabad / औरंगाबाद', name: 'Manoj Patil / मनोज पाटिल', phone: '+91 9822345674', email: 'manoj.patil@farmconnect.in' },
+            { division: 'Kolhapur / कोल्हापुर', name: 'Sneha Gokhale / स्नेहा गोखले', phone: '+91 9822345675', email: 'sneha.gokhale@farmconnect.in' },
+            { division: 'Solapur / सोलापुर', name: 'Nilesh Jagtap / नीलेश जगताप', phone: '+91 9822345676', email: 'nilesh.jagtap@farmconnect.in' },
+            { division: 'Amravati / अमरावती', name: 'Meera Phadke / मीरा फडके', phone: '+91 9822345677', email: 'meera.phadke@farmconnect.in' }
         ],
-        'Uttar Pradesh': [
-            { division: 'Lucknow', name: 'Alok Tiwari', phone: '+91 9833345670', email: 'alok.tiwari@farmconnect.in' },
-            { division: 'Kanpur', name: 'Shivani Agarwal', phone: '+91 9833345671', email: 'shivani.agarwal@farmconnect.in' },
-            { division: 'Varanasi', name: 'Deepak Yadav', phone: '+91 9833345672', email: 'deepak.yadav@farmconnect.in' },
-            { division: 'Prayagraj', name: 'Ritu Srivastava', phone: '+91 9833345673', email: 'ritu.srivastava@farmconnect.in' },
-            { division: 'Ghaziabad', name: 'Mohit Sharma', phone: '+91 9833345674', email: 'mohit.sharma@farmconnect.in' },
-            { division: 'Meerut', name: 'Swati Gupta', phone: '+91 9833345675', email: 'swati.gupta@farmconnect.in' },
-            { division: 'Agra', name: 'Sanjay Singh', phone: '+91 9833345676', email: 'sanjay.singh@farmconnect.in' },
-            { division: 'Gorakhpur', name: 'Anita Verma', phone: '+91 9833345677', email: 'anita.verma@farmconnect.in' }
+        'Uttar Pradesh / उत्तर प्रदेश': [
+            { division: 'Lucknow / लखनऊ', name: 'Alok Tiwari / आलोक तिवारी', phone: '+91 9833345670', email: 'alok.tiwari@farmconnect.in' },
+            { division: 'Kanpur / कानपुर', name: 'Shivani Agarwal / शिवानी अग्रवाल', phone: '+91 9833345671', email: 'shivani.agarwal@farmconnect.in' },
+            { division: 'Varanasi / वाराणसी', name: 'Deepak Yadav / दीपक यादव', phone: '+91 9833345672', email: 'deepak.yadav@farmconnect.in' },
+            { division: 'Prayagraj / प्रयागराज', name: 'Ritu Srivastava / ऋतु श्रीवास्तव', phone: '+91 9833345673', email: 'ritu.srivastava@farmconnect.in' },
+            { division: 'Ghaziabad / गाज़ियाबाद', name: 'Mohit Sharma / मोहित शर्मा', phone: '+91 9833345674', email: 'mohit.sharma@farmconnect.in' },
+            { division: 'Meerut / मेरठ', name: 'Swati Gupta / स्वाति गुप्ता', phone: '+91 9833345675', email: 'swati.gupta@farmconnect.in' },
+            { division: 'Agra / आगरा', name: 'Sanjay Singh / संजय सिंह', phone: '+91 9833345676', email: 'sanjay.singh@farmconnect.in' },
+            { division: 'Gorakhpur / गोरखपुर', name: 'Anita Verma / अनिता वर्मा', phone: '+91 9833345677', email: 'anita.verma@farmconnect.in' }
         ]
     }), [])
+
+
 
     const states = Object.keys(stateDivisionData)
     const allDivisions = useMemo(
