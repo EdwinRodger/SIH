@@ -6,7 +6,8 @@
     "contact": "Contact",
     "login": "Login",
     "signup": "Sign Up",
-    "logout": "Logout"
+    "logout": "Logout",
+    "farmersHelpdesk": "Farmer's Helpdesk"
   },
   "hero": {
     "title": "Welcome to FarmConnect",
@@ -22,7 +23,7 @@
       { "title": "AI ChatBot", "desc": "Get real-time answers to your questions with our AI chatbot.", "icon": "🤖" },
       { "title": "Weather Forecast", "desc": "Weather predictions to help you plan your farming activities and protect your crops.", "icon": "🌤️" },
       { "title": "Fertilizer Recommendation", "desc": "Get recommendations for the best fertilizers for your crops.", "icon": "🌱" },
-      { "title": "Query Support", "desc": "Get support for your queries with our experts.", "icon": "💬" }
+      { "title": "Query Support", "desc": "Get support for your queries with our experts.", "icon": "💬", "link":"/farmers-helpdesk" }
     ]
   },
   "contact": {
@@ -72,6 +73,37 @@
     "terms": "Terms of Service",
     "contactInfo": "Contact Info",
     "tagline": "Built with ❤️ for Smart India Hackathon"
+  },
+  "helpdesk": {
+    "title": "Farmer's Helpdesk",
+    "intro": "Find your division supervisor and reach out instantly, or submit a query below.",
+    "findSupervisor": "Find Your Division Supervisor",
+    "state": "State",
+    "division": "Division",
+    "selectState": "Select State",
+    "selectDivision": "Select Division",
+    "selectStateFirst": "Select State first",
+    "details": "Supervisor Details",
+    "name": "Name",
+    "helpline": "Helpline",
+    "email": "Email",
+    "callNow": "Call Now",
+    "sendEmail": "Send Email",
+    "chatTitle": "Query Support",
+    "farmerName": "Farmer Name",
+    "replyMobile": "Reply Mobile No.",
+    "yourQuery": "Your Query (Hindi/English)",
+    "typeQuestion": "Type your question here",
+    "micHint": "Use the mic button to dictate your query. Works best in Chrome.",
+    "speak": "Speak",
+    "stop": "Stop",
+    "submit": "Submit Query",
+    "voiceUnsupported": "Voice typing is not supported in this browser.",
+    "submitSuccess": "Your query has been submitted. Our supervisor will contact you shortly.",
+    "placeholder": {
+      "farmerName": "Enter your name",
+      "mobile": "Enter mobile number"
+    }
   }
 }
 

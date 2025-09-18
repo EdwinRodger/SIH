@@ -20,7 +20,15 @@ void i18n
             en: { translation: en },
             hi: { translation: hi },
         },
-        lng: 'en', // default language
+        lng: (() => {
+            try {
+                const saved = localStorage.getItem('app_lang')
+                if (saved) return saved
+            } catch { }
+            // Try browser language map
+            const browser = (navigator.language || 'en').slice(0, 2)
+            return ['en', 'hi'].includes(browser) ? browser : 'en'
+        })(),
         fallbackLng: 'en',
         interpolation: {
             escapeValue: false,

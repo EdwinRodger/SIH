@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import FarmerHelpdesk from './pages/FarmerHelpdesk'
 
 /**
  * Main App Component
@@ -19,6 +20,9 @@ function App() {
                 {/* Authentication routes */}
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+
+                {/* FarmerHelpdesk route */}
+                <Route path="/farmers-helpdesk" element={<FarmerHelpdesk />} />
 
                 {/* Catch-all route for 404 */}
                 <Route path="*" element={<Home />} />

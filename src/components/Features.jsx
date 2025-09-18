@@ -31,7 +31,11 @@ function Features() {
                     {features.map((feature, index) => (
                         <div key={index} className="col-lg-4 col-md-6">
                             <div className="card h-100 shadow-sm border-5 border-success-subtle rounded-5">
-                                <div className="card-body text-center p-4">
+                                <div className="card-body text-center p-4" onClick={() => {
+                                    if (feature.link) {
+                                        window.location.href = feature.link
+                                    }
+                                }}>
                                     <div className="display-4 mb-3">
                                         {feature.icon}
                                     </div>

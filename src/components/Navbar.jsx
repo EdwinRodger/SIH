@@ -49,6 +49,9 @@ function Navbar() {
                         <li className="nav-item">
                             <a className="nav-link" href="#contact">{t('nav.contact')}</a>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/farmers-helpdesk">{t('nav.farmersHelpdesk')}</Link>
+                        </li>
                     </ul>
 
                     <div className="row g-2 align-items-center flex-nowrap">
@@ -57,7 +60,11 @@ function Navbar() {
                             <select
                                 className="form-select bg-success-subtle border-success"
                                 value={i18n.language}
-                                onChange={(e) => i18n.changeLanguage(e.target.value)}
+                                onChange={(e) => {
+                                    const lang = e.target.value
+                                    try { localStorage.setItem('app_lang', lang) } catch { }
+                                    i18n.changeLanguage(lang)
+                                }}
                             >
                                 {Object.entries(supportedLanguages).map(([code, label]) => (
                                     <option key={code} value={code}>{label}</option>
