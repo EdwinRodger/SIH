@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 
 /**
  * Features Component
@@ -8,6 +9,7 @@ import { useTranslation } from 'react-i18next'
  */
 function Features() {
     const { t } = useTranslation()
+    const navigate = useNavigate()
     // Feature data array
     const features = t('features.cards', { returnObjects: true })
 
@@ -29,13 +31,17 @@ function Features() {
                 {/* Features grid */}
                 <div className="row g-4 d-flex justify-content-center">
                     {features.map((feature, index) => (
-                        <div key={index} className="col-lg-4 col-md-6">
+                        <div
+                            key={index}
+                            className="col-lg-4 col-md-6"
+                            onClick={() => {
+                                if (feature.link) {
+                                    navigate(feature.link)
+                                }
+                            }}
+                        >
                             <div className="card h-100 shadow-sm border-5 border-success-subtle rounded-5">
-                                <div className="card-body text-center p-4" onClick={() => {
-                                    if (feature.link) {
-                                        window.location.href = feature.link
-                                    }
-                                }}>
+                                <div className="card-body text-center p-4">
                                     <div className="display-4 mb-3">
                                         {feature.icon}
                                     </div>
