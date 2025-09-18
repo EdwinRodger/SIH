@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Hero Component
@@ -6,6 +7,7 @@ import React from 'react'
  * Uses Bootstrap responsive image and grid system
  */
 function Hero() {
+    const { t } = useTranslation()
     return (
         <section id="hero" className="hero-section bg-light py-5">
             <div className="container">
@@ -13,19 +15,17 @@ function Hero() {
                     {/* Text content */}
                     <div className="col-lg-6">
                         <h1 className="display-4 fw-bold text-success mb-3">
-                            Welcome to FarmConnect
+                            {t('hero.title')}
                         </h1>
                         <p className="lead text-muted mb-4">
-                            Revolutionizing agriculture through smart technology.
-                            Connect with fellow farmers, access market insights,
-                            and grow your farm with our innovative platform.
+                            {t('hero.subtitle')}
                         </p>
                         <div className="d-flex gap-3">
                             <button className="btn btn-success btn-lg">
-                                Get Started
+                                {t('hero.getStarted')}
                             </button>
                             <button className="btn btn-outline-success btn-lg">
-                                Learn More
+                                {t('hero.learnMore')}
                             </button>
                         </div>
                     </div>

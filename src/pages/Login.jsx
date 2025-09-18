@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 
 /**
@@ -8,6 +9,7 @@ import Navbar from '../components/Navbar'
  * Uses local state for demonstration purposes
  */
 function Login() {
+    const { t } = useTranslation()
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -38,11 +40,11 @@ function Login() {
                     <div className="col-md-6 col-lg-4">
                         <div className="card shadow">
                             <div className="card-body p-4">
-                                <h2 className="card-title text-center mb-4">Login</h2>
+                                <h2 className="card-title text-center mb-4">{t('auth.login.title')}</h2>
 
                                 <form onSubmit={handleSubmit}>
                                     <div className="mb-3">
-                                        <label htmlFor="email" className="form-label">Email Address</label>
+                                        <label htmlFor="email" className="form-label">{t('auth.login.email')}</label>
                                         <input
                                             type="email"
                                             className="form-control"
@@ -55,7 +57,7 @@ function Login() {
                                     </div>
 
                                     <div className="mb-3">
-                                        <label htmlFor="password" className="form-label">Password</label>
+                                        <label htmlFor="password" className="form-label">{t('auth.login.password')}</label>
                                         <input
                                             type="password"
                                             className="form-control"
@@ -69,16 +71,16 @@ function Login() {
 
                                     <div className="d-grid">
                                         <button type="submit" className="btn btn-success">
-                                            Login
+                                            {t('auth.login.cta')}
                                         </button>
                                     </div>
                                 </form>
 
                                 <div className="text-center mt-3">
                                     <p className="mb-0">
-                                        Don't have an account?
+                                        {t('auth.login.noAccount')}
                                         <Link to="/signup" className="text-decoration-none ms-1">
-                                            Sign up here
+                                            {t('auth.login.signupHere')}
                                         </Link>
                                     </p>
                                 </div>

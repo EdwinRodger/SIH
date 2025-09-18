@@ -1,0 +1,78 @@
+{
+  "brand": "FarmConnect",
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Welcome to FarmConnect",
+    "subtitle": "Revolutionizing agriculture through smart technology. Connect with fellow farmers, access market insights, and grow your farm with our innovative platform.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "heading": "Why Choose FarmConnect?",
+    "subheading": "Our platform provides everything you need to modernize your farming operations and increase your productivity.",
+    "cards": [
+      { "title": "Image Disease Detection", "desc": "Detect diseases in your crops with advanced image recognition technology." },
+      { "title": "AI ChatBot", "desc": "Get real-time answers to your questions with our AI chatbot." },
+      { "title": "Weather Forecast", "desc": "Weather predictions to help you plan your farming activities and protect your crops." },
+      { "title": "Fertilizer Recommendation", "desc": "Get recommendations for the best fertilizers for your crops." },
+      { "title": "Query Support", "desc": "Get support for your queries with our experts." }
+    ]
+  },
+  "contact": {
+    "heading": "Get In Touch",
+    "subheading": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "message": "Message",
+    "messagePlaceholder": "Enter your message",
+    "submit": "Send Message"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email": "Email Address",
+      "password": "Password",
+      "cta": "Login",
+      "noAccount": "Don't have an account?",
+      "signupHere": "Sign up here"
+    },
+    "signup": {
+      "title": "Sign Up",
+      "name": "Full Name",
+      "email": "Email Address",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "cta": "Sign Up",
+      "haveAccount": "Already have an account?",
+      "loginHere": "Login here"
+    }
+  },
+  "footer": {
+    "brand": "FarmConnect",
+    "description": "Revolutionizing agriculture through smart technology and connecting farmers for a sustainable future.",
+    "quickLinks": "Quick Links",
+    "aboutUs": "About Us",
+    "features": "Features",
+    "contact": "Contact",
+    "support": "Support",
+    "helpCenter": "Help Center",
+    "docs": "Documentation",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contactInfo": "Contact Info",
+    "tagline": "Built with ❤️ for Smart India Hackathon"
+  }
+}
+
+

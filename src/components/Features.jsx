@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Features Component
@@ -6,34 +7,9 @@ import React from 'react'
  * Each card has a placeholder title and description
  */
 function Features() {
+    const { t } = useTranslation()
     // Feature data array
-    const features = [
-        {
-            title: "Image Disease Detection",
-            description: "Detect diseases in your crops with advanced image recognition technology.",
-            icon: "🔍"
-        },
-        {
-            title: "AI ChatBot",
-            description: "Get real-time answers to your questions with our AI chatbot.",
-            icon: "🤖"
-        },
-        {
-            title: "Weather Forecast",
-            description: "Weather predictions to help you plan your farming activities and protect your crops.",
-            icon: "🌤️"
-        },
-        {
-            title: "Fertilizer Recommendation",
-            description: "Get recommendations for the best fertilizers for your crops.",
-            icon: "🌱"
-        },
-        {
-            title: "Query Support",
-            description: "Get support for your queries with our experts.",
-            icon: "💬"
-        }
-    ]
+    const features = t('features.cards', { returnObjects: true })
 
     return (
         <section id="features" className="py-5 bg-white">
@@ -42,11 +18,10 @@ function Features() {
                 <div className="row">
                     <div className="col-lg-8 mx-auto text-center mb-5">
                         <h2 className="display-5 fw-bold text-success mb-3">
-                            Why Choose FarmConnect?
+                            {t('features.heading')}
                         </h2>
                         <p className="lead text-muted">
-                            Our platform provides everything you need to modernize your farming operations
-                            and increase your productivity.
+                            {t('features.subheading')}
                         </p>
                     </div>
                 </div>
@@ -64,7 +39,7 @@ function Features() {
                                         {feature.title}
                                     </h5>
                                     <p className="card-text text-muted">
-                                        {feature.description}
+                                        {feature.desc}
                                     </p>
                                 </div>
                             </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 /**
  * GetInTouch Component
@@ -6,6 +7,7 @@ import React, { useState } from 'react'
  * Uses Bootstrap form styling and validation
  */
 function GetInTouch() {
+    const { t } = useTranslation()
     const [formData, setFormData] = useState({
         name: '',
         number: '',
@@ -43,11 +45,10 @@ function GetInTouch() {
                         {/* Section header */}
                         <div className="text-center mb-5">
                             <h2 className="display-5 fw-bold text-success mb-3">
-                                Get In Touch
+                                {t('contact.heading')}
                             </h2>
                             <p className="lead text-muted">
-                                Have questions? We'd love to hear from you.
-                                Send us a message and we'll respond as soon as possible.
+                                {t('contact.subheading')}
                             </p>
                         </div>
 
@@ -58,7 +59,7 @@ function GetInTouch() {
                                     <div className="row">
                                         <div className="col-md-6 mb-3">
                                             <label htmlFor="name" className="form-label">
-                                                Full Name *
+                                                {t('contact.name')} *
                                             </label>
                                             <input
                                                 type="text"
@@ -68,13 +69,13 @@ function GetInTouch() {
                                                 value={formData.name}
                                                 onChange={handleChange}
                                                 required
-                                                placeholder="Enter your full name"
+                                                placeholder={t('contact.namePlaceholder')}
                                             />
                                         </div>
 
                                         <div className="col-md-6 mb-3">
                                             <label htmlFor="number" className="form-label">
-                                                Phone Number *
+                                                {t('contact.phone')} *
                                             </label>
                                             <input
                                                 type="number"
@@ -84,14 +85,14 @@ function GetInTouch() {
                                                 value={formData.number}
                                                 onChange={handleChange}
                                                 required
-                                                placeholder="Enter your phone number"
+                                                placeholder={t('contact.phonePlaceholder')}
                                             />
                                         </div>
                                     </div>
 
                                     <div className="mb-4">
                                         <label htmlFor="message" className="form-label">
-                                            Message *
+                                            {t('contact.message')} *
                                         </label>
                                         <textarea
                                             className="form-control"
@@ -101,13 +102,13 @@ function GetInTouch() {
                                             value={formData.message}
                                             onChange={handleChange}
                                             required
-                                            placeholder="Tell us how we can help you..."
+                                            placeholder={t('contact.messagePlaceholder')}
                                         ></textarea>
                                     </div>
 
                                     <div className="text-center">
                                         <button type="submit" className="btn btn-success btn-lg px-5">
-                                            Send Message
+                                            {t('contact.submit')}
                                         </button>
                                     </div>
                                 </form>

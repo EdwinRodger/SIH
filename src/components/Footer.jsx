@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Footer Component
@@ -6,61 +7,61 @@ import React from 'react'
  * Uses Bootstrap grid system for responsive layout
  */
 function Footer() {
+    const { t } = useTranslation()
     return (
         <footer className="bg-success-subtle text-dark py-5 border-top">
             <div className="container">
                 <div className="row">
                     {/* Company information */}
                     <div className="col-lg-4 mb-4">
-                        <h5 className="text-success mb-3">FarmConnect</h5>
+                        <h5 className="text-success mb-3">{t('footer.brand')}</h5>
                         <p className="text-muted">
-                            Revolutionizing agriculture through smart technology and
-                            connecting farmers for a sustainable future.
+                            {t('footer.description')}
                         </p>
                     </div>
 
                     {/* Quick links */}
                     <div className="col-lg-2 col-md-6 mb-4">
-                        <h6 className="text-success mb-3">Quick Links</h6>
+                        <h6 className="text-success mb-3">{t('footer.quickLinks')}</h6>
                         <ul className="list-unstyled">
                             <li className="mb-2">
-                                <a href="#hero" className="text-muted text-decoration-none">About Us</a>
+                                <a href="#hero" className="text-muted text-decoration-none">{t('footer.aboutUs')}</a>
                             </li>
                             <li className="mb-2">
-                                <a href="#features" className="text-muted text-decoration-none">Features</a>
+                                <a href="#features" className="text-muted text-decoration-none">{t('footer.features')}</a>
                             </li>
                             <li className="mb-2">
-                                <a href="#contact" className="text-muted text-decoration-none">Contact</a>
+                                <a href="#contact" className="text-muted text-decoration-none">{t('footer.contact')}</a>
                             </li>
                         </ul>
                     </div>
 
                     {/* Support */}
                     <div className="col-lg-2 col-md-6 mb-4">
-                        <h6 className="text-success mb-3">Support</h6>
+                        <h6 className="text-success mb-3">{t('footer.support')}</h6>
                         <ul className="list-unstyled">
                             <li className="mb-2">
-                                <a href="#" className="text-muted text-decoration-none">Help Center</a>
+                                <a href="#" className="text-muted text-decoration-none">{t('footer.helpCenter')}</a>
                             </li>
                             <li className="mb-2">
-                                <a href="#" className="text-muted text-decoration-none">Documentation</a>
+                                <a href="#" className="text-muted text-decoration-none">{t('footer.docs')}</a>
                             </li>
                             <li className="mb-2">
-                                <a href="#" className="text-muted text-decoration-none">Privacy Policy</a>
+                                <a href="#" className="text-muted text-decoration-none">{t('footer.privacy')}</a>
                             </li>
                             <li className="mb-2">
-                                <a href="#" className="text-muted text-decoration-none">Terms of Service</a>
+                                <a href="#" className="text-muted text-decoration-none">{t('footer.terms')}</a>
                             </li>
                         </ul>
                     </div>
 
                     {/* Contact info */}
                     <div className="col-lg-4 mb-4">
-                        <h6 className="text-success mb-3">Contact Info</h6>
+                        <h6 className="text-success mb-3">{t('footer.contactInfo')}</h6>
                         <div className="text-muted">
                             <p className="mb-2">
                                 <i className="fas fa-map-marker-alt me-2"></i>
-                                SDSF, DAVV
+                                SDSF, DAVV, Indore, M.P. (452001)
                             </p>
                             <p className="mb-2">
                                 <i className="fas fa-phone me-2"></i>
@@ -78,7 +79,7 @@ function Footer() {
                 <hr className="my-4" />
                 <div className="row align-items-center">
                     <p className="text-muted mb-0">
-                        Built with ❤️ for Smart India Hackathon
+                        {t('footer.tagline')}
                     </p>
                 </div>
             </div>

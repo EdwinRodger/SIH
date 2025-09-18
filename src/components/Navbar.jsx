@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { supportedLanguages } from '../i18n/index.js'
 
 /**
  * Navbar Component
@@ -7,6 +9,7 @@ import { Link } from 'react-router-dom'
  * Shows different buttons based on login state
  */
 function Navbar() {
+    const { t, i18n } = useTranslation()
     // Simple authentication state (in a real app, this would come from context/state management)
     const [isLoggedIn, setIsLoggedIn] = useState(false)
 
@@ -21,7 +24,7 @@ function Navbar() {
             <div className="container">
                 {/* Brand/Logo */}
                 <Link className="navbar-brand fs-3 fw-bold text-success" to="/">
-                    FarmConnect
+                    {t('brand')}
                 </Link>
 
                 {/* Mobile menu toggle button */}
@@ -38,33 +41,57 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mx-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">Home</Link>
+                            <Link className="nav-link" to="/">{t('nav.home')}</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#features">Features</a>
+                            <a className="nav-link" href="#features">{t('nav.features')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#contact">Contact</a>
+                            <a className="nav-link" href="#contact">{t('nav.contact')}</a>
                         </li>
                     </ul>
 
-                    {/* Authentication buttons */}
-                    <div className="d-flex">
-                        {isLoggedIn ? (
-                            <button
-                                className="btn btn-outline-success"
-                                onClick={handleLogout}
+                    <div className="row g-2 align-items-center flex-nowrap">
+                        {/* Language Switcher */}
+                        <div className="col-auto">
+                            <select
+                                className="form-select bg-success-subtle border-success"
+                                value={i18n.language}
+                                onChange={(e) => i18n.changeLanguage(e.target.value)}
                             >
-                                Logout
-                            </button>
+                                {Object.entries(supportedLanguages).map(([code, label]) => (
+                                    <option key={code} value={code}>{label}</option>
+                                ))}
+                            </select>
+                        </div>
+                        {/* Authentication buttons */}
+                        {isLoggedIn ? (
+                            <div className="col-auto">
+                                <button
+                                    className="btn btn-outline-success w-100"
+                                    onClick={handleLogout}
+                                >
+                                    {t('nav.logout')}
+                                </button>
+                            </div>
                         ) : (
                             <>
-                                <Link className="btn btn-outline-success me-2" to="/login">
-                                    Login
-                                </Link>
-                                <Link className="btn btn-success" to="/signup">
-                                    Sign Up
-                                </Link>
+                                <div className="col-auto">
+                                    <Link
+                                        className="btn btn-outline-success w-100"
+                                        to="/login"
+                                    >
+                                        {t('nav.login')}
+                                    </Link>
+                                </div>
+                                <div className="col-auto">
+                                    <Link
+                                        className="btn btn-success w-100"
+                                        to="/signup"
+                                    >
+                                        {t('nav.signup')}
+                                    </Link>
+                                </div>
                             </>
                         )}
                     </div>

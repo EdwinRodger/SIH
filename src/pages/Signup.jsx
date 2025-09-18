@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 
 /**
@@ -8,6 +9,7 @@ import Navbar from '../components/Navbar'
  * Uses local state for demonstration purposes
  */
 function Signup() {
+    const { t } = useTranslation()
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -47,11 +49,11 @@ function Signup() {
                     <div className="col-md-6 col-lg-4">
                         <div className="card shadow">
                             <div className="card-body p-4">
-                                <h2 className="card-title text-center mb-4">Sign Up</h2>
+                                <h2 className="card-title text-center mb-4">{t('auth.signup.title')}</h2>
 
                                 <form onSubmit={handleSubmit}>
                                     <div className="mb-3">
-                                        <label htmlFor="name" className="form-label">Full Name</label>
+                                        <label htmlFor="name" className="form-label">{t('auth.signup.name')}</label>
                                         <input
                                             type="text"
                                             className="form-control"
@@ -64,7 +66,7 @@ function Signup() {
                                     </div>
 
                                     <div className="mb-3">
-                                        <label htmlFor="email" className="form-label">Email Address</label>
+                                        <label htmlFor="email" className="form-label">{t('auth.signup.email')}</label>
                                         <input
                                             type="email"
                                             className="form-control"
@@ -77,7 +79,7 @@ function Signup() {
                                     </div>
 
                                     <div className="mb-3">
-                                        <label htmlFor="password" className="form-label">Password</label>
+                                        <label htmlFor="password" className="form-label">{t('auth.signup.password')}</label>
                                         <input
                                             type="password"
                                             className="form-control"
@@ -90,7 +92,7 @@ function Signup() {
                                     </div>
 
                                     <div className="mb-3">
-                                        <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
+                                        <label htmlFor="confirmPassword" className="form-label">{t('auth.signup.confirmPassword')}</label>
                                         <input
                                             type="password"
                                             className="form-control"
@@ -104,16 +106,16 @@ function Signup() {
 
                                     <div className="d-grid">
                                         <button type="submit" className="btn btn-success">
-                                            Sign Up
+                                            {t('auth.signup.cta')}
                                         </button>
                                     </div>
                                 </form>
 
                                 <div className="text-center mt-3">
                                     <p className="mb-0">
-                                        Already have an account?
+                                        {t('auth.signup.haveAccount')}
                                         <Link to="/login" className="text-decoration-none ms-1">
-                                            Login here
+                                            {t('auth.signup.loginHere')}
                                         </Link>
                                     </p>
                                 </div>
