@@ -66,7 +66,7 @@ function FarmerHelpdesk() {
     const startVoiceTyping = () => {
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
         if (!SpeechRecognition) {
-            alert('Voice typing is not supported in this browser.')
+            alert(t('helpdesk.voiceUnsupported'))
             return
         }
         if (!recognitionRef.current) {
@@ -101,7 +101,7 @@ function FarmerHelpdesk() {
         e.preventDefault()
         // Simulate sending to backend / SMS gateway
         console.log('Helpdesk query submitted:', chatForm)
-        alert('Your query has been submitted. Our supervisor will contact you shortly.')
+        alert(t('helpdesk.submitSuccess'))
         setChatForm({ farmerName: '', division: '', query: '', replyMobile: '' })
     }
 

@@ -37,7 +37,8 @@
     "phonePlaceholder": "Enter your phone number",
     "message": "Message",
     "messagePlaceholder": "Enter your message",
-    "submit": "Send Message"
+    "submit": "Send Message",
+    "submitSuccess": "Your message has been submitted. We'll respond as soon as possible."
   },
   "auth": {
     "login": {

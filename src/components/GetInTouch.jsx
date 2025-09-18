@@ -27,7 +27,7 @@ function GetInTouch() {
         e.preventDefault()
         // In a real app, this would send data to a backend
         console.log('Contact form submitted:', formData)
-        alert('Thank you for your message! We will get back to you soon.')
+        alert(t('contact.submitSuccess'))
 
         // Reset form
         setFormData({
