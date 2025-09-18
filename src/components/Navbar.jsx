@@ -62,6 +62,8 @@ function Navbar() {
                                 {Object.entries(supportedLanguages).map(([code, label]) => (
                                     <option key={code} value={code}>{label}</option>
                                 ))}
+                                <option value="pa" disabled>Punjabi (ਪੰਜਾਬੀ)</option>
+                                <option value="ta" disabled>Tamil (தமிழ்)</option>
                             </select>
                         </div>
                         {/* Authentication buttons */}
