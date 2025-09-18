@@ -18,11 +18,11 @@
     "heading": "Why Choose FarmConnect?",
     "subheading": "Our platform provides everything you need to modernize your farming operations and increase your productivity.",
     "cards": [
-      { "title": "Image Disease Detection", "desc": "Detect diseases in your crops with advanced image recognition technology." },
-      { "title": "AI ChatBot", "desc": "Get real-time answers to your questions with our AI chatbot." },
-      { "title": "Weather Forecast", "desc": "Weather predictions to help you plan your farming activities and protect your crops." },
-      { "title": "Fertilizer Recommendation", "desc": "Get recommendations for the best fertilizers for your crops." },
-      { "title": "Query Support", "desc": "Get support for your queries with our experts." }
+      { "title": "Image Disease Detection", "desc": "Detect diseases in your crops with advanced image recognition technology.", "icon": "🔍" },
+      { "title": "AI ChatBot", "desc": "Get real-time answers to your questions with our AI chatbot.", "icon": "🤖" },
+      { "title": "Weather Forecast", "desc": "Weather predictions to help you plan your farming activities and protect your crops.", "icon": "🌤️" },
+      { "title": "Fertilizer Recommendation", "desc": "Get recommendations for the best fertilizers for your crops.", "icon": "🌱" },
+      { "title": "Query Support", "desc": "Get support for your queries with our experts.", "icon": "💬" }
     ]
   },
   "contact": {
