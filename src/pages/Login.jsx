@@ -38,16 +38,16 @@ function Login() {
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6 col-lg-4">
-                        <div className="card shadow">
+                        <div className="card shadow rounded-5" style={{ border: '1px solid #000' }}>
                             <div className="card-body p-4">
-                                <h2 className="card-title text-center mb-4">{t('auth.login.title')}</h2>
+                                <h2 className="card-title text-center mb-4" style={{ fontWeight: 1000 }}>{t('auth.login.title')}</h2>
 
                                 <form onSubmit={handleSubmit}>
                                     <div className="mb-3">
                                         <label htmlFor="email" className="form-label">{t('auth.login.email')}</label>
                                         <input
                                             type="email"
-                                            className="form-control"
+                                            className="form-control rounded-5"
                                             id="email"
                                             name="email"
                                             value={formData.email}
@@ -60,7 +60,7 @@ function Login() {
                                         <label htmlFor="password" className="form-label">{t('auth.login.password')}</label>
                                         <input
                                             type="password"
-                                            className="form-control"
+                                            className="form-control rounded-5"
                                             id="password"
                                             name="password"
                                             value={formData.password}
@@ -70,7 +70,7 @@ function Login() {
                                     </div>
 
                                     <div className="d-grid">
-                                        <button type="submit" className="btn btn-success">
+                                        <button type="submit" className="btn btn-success rounded-5">
                                             {t('auth.login.cta')}
                                         </button>
                                     </div>
