@@ -52,6 +52,9 @@ function Navbar() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/farmers-helpdesk">{t('nav.farmersHelpdesk')}</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/farmers-helpdesk">Marketplace</Link>
+                        </li>
                     </ul>
 
                     <div className="row g-2 align-items-center flex-nowrap">
