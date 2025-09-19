@@ -53,7 +53,7 @@ function GetInTouch() {
                         </div>
 
                         {/* Contact form */}
-                        <div className="card shadow border-0">
+                        <div className="card shadow border-0 rounded-5">
                             <div className="card-body p-5">
                                 <form onSubmit={handleSubmit}>
                                     <div className="row">
@@ -63,7 +63,7 @@ function GetInTouch() {
                                             </label>
                                             <input
                                                 type="text"
-                                                className="form-control"
+                                                className="form-control rounded-5"
                                                 id="name"
                                                 name="name"
                                                 value={formData.name}
@@ -79,7 +79,7 @@ function GetInTouch() {
                                             </label>
                                             <input
                                                 type="number"
-                                                className="form-control"
+                                                className="form-control rounded-5"
                                                 id="number"
                                                 name="number"
                                                 value={formData.number}
@@ -95,7 +95,7 @@ function GetInTouch() {
                                             {t('contact.message')} *
                                         </label>
                                         <textarea
-                                            className="form-control"
+                                            className="form-control rounded-3"
                                             id="message"
                                             name="message"
                                             rows="5"
@@ -107,7 +107,7 @@ function GetInTouch() {
                                     </div>
 
                                     <div className="text-center">
-                                        <button type="submit" className="btn btn-success btn-lg px-5">
+                                        <button type="submit" className="btn btn-success btn-lg px-5 rounded-5">
                                             {t('contact.submit')}
                                         </button>
                                     </div>

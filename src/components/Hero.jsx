@@ -21,10 +21,10 @@ function Hero() {
                             {t('hero.subtitle')}
                         </p>
                         <div className="d-flex gap-3">
-                            <button className="btn btn-success btn-lg">
+                            <button className="btn btn-success btn-lg rounded-5">
                                 {t('hero.getStarted')}
                             </button>
-                            <button className="btn btn-outline-success btn-lg">
+                            <button className="btn btn-outline-success btn-lg rounded-5">
                                 {t('hero.learnMore')}
                             </button>
                         </div>
@@ -36,7 +36,7 @@ function Hero() {
                             <img
                                 src="https://placehold.co/600x400/28a745/ffffff?text=KrishiSetu+Hero+Image"
                                 alt="KrishiSetu Hero"
-                                className="img-fluid rounded shadow"
+                                className="img-fluid rounded shadow rounded-5"
                             />
                         </div>
                     </div>

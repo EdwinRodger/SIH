@@ -23,7 +23,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-light bg-success-subtle">
             <div className="container">
                 {/* Brand/Logo */}
-                <Link className="navbar-brand fs-3 fw-bold text-success" to="/">
+                <Link className="navbar-brand fs-2 fw-bold text-success" to="/">
                     {t('brand')}
                 </Link>
 
@@ -39,7 +39,7 @@ function Navbar() {
 
                 {/* Navigation links */}
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav mx-auto">
+                    <ul className="navbar-nav mx-auto gap-4 fs-5 fw-bold">
                         <li className="nav-item">
                             <Link className="nav-link" to="/">{t('nav.home')}</Link>
                         </li>
@@ -58,7 +58,7 @@ function Navbar() {
                         {/* Language Switcher */}
                         <div className="col-auto">
                             <select
-                                className="form-select bg-success-subtle border-success"
+                                className="form-select bg-success-subtle border-success rounded-5"
                                 value={i18n.language}
                                 onChange={(e) => {
                                     const lang = e.target.value
@@ -77,7 +77,7 @@ function Navbar() {
                         {isLoggedIn ? (
                             <div className="col-auto">
                                 <button
-                                    className="btn btn-outline-success w-100"
+                                    className="btn btn-outline-success w-100 rounded-5 fs-5 fw-bold"
                                     onClick={handleLogout}
                                 >
                                     {t('nav.logout')}
@@ -87,7 +87,7 @@ function Navbar() {
                             <>
                                 <div className="col-auto">
                                     <Link
-                                        className="btn btn-outline-success w-100"
+                                        className="btn btn-outline-success w-100 rounded-5 fs-5 fw-bold"
                                         to="/login"
                                     >
                                         {t('nav.login')}
@@ -95,7 +95,7 @@ function Navbar() {
                                 </div>
                                 <div className="col-auto">
                                     <Link
-                                        className="btn btn-success w-100"
+                                        className="btn btn-success w-100 rounded-5 fs-5 fw-bold"
                                         to="/signup"
                                     >
                                         {t('nav.signup')}
