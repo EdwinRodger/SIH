@@ -8,6 +8,7 @@
     "signup": "साइन अप",
     "logout": "लॉगआउट",
     "farmersHelpdesk": "किसान सहायता केंद्र",
+    "farmingAwareness": "कृषि जागरूकता",
     "marketplace": "किसान बाजार"
   },
   "hero": {
@@ -82,37 +83,89 @@
     "contactInfo": "संपर्क जानकारी",
     "tagline": "स्मार्ट इंडिया हैकथॉन के लिए ❤️ से बनाया गया"
   },
-  "helpdesk": {
-    "title": "किसान सहायता केंद्र",
-    "intro": "अपना प्रभाग चुनें और पर्यवेक्षक से तुरंत संपर्क करें, या नीचे अपना प्रश्न भेजें।",
-    "findSupervisor": "अपने प्रभाग के पर्यवेक्षक को खोजें",
-    "state": "राज्य",
-    "division": "प्रभाग",
-    "selectState": "राज्य चुनें",
-    "selectDivision": "प्रभाग चुनें",
-    "selectStateFirst": "पहले राज्य चुनें",
-    "details": "पर्यवेक्षक विवरण",
-    "name": "नाम",
-    "helpline": "हेल्पलाइन",
-    "email": "ईमेल",
-    "callNow": "कॉल करें",
-    "sendEmail": "ईमेल भेजें",
-    "chatTitle": "प्रश्न सहायता",
-    "farmerName": "किसान का नाम",
-    "replyMobile": "उत्तर मोबाइल नंबर",
-    "yourQuery": "आपका प्रश्न (हिंदी/अंग्रेज़ी)",
-    "typeQuestion": "अपना प्रश्न यहाँ लिखें",
-    "micHint": "माइक बटन से बोलकर लिखें। क्रोम ब्राउज़र में सबसे अच्छा काम करता है।",
-    "speak": "बोलें",
-    "stop": "रोकें",
-    "submit": "प्रश्न भेजें",
-    "voiceUnsupported": "यह ब्राउज़र वॉइस टाइपिंग को सपोर्ट नहीं करता।",
-    "submitSuccess": "आपका प्रश्न भेज दिया गया है। पर्यवेक्षक शीघ्र संपर्क करेंगे।",
-    "placeholder": {
-      "farmerName": "अपना नाम दर्ज करें",
-      "mobile": "मोबाइल नंबर दर्ज करें"
+    "helpdesk": {
+        "title": "किसान सहायता केंद्र",
+        "intro": "अपना प्रभाग चुनें और पर्यवेक्षक से तुरंत संपर्क करें, या नीचे अपना प्रश्न भेजें।",
+        "findSupervisor": "अपने प्रभाग के पर्यवेक्षक को खोजें",
+        "state": "राज्य",
+        "division": "प्रभाग",
+        "selectState": "राज्य चुनें",
+        "selectDivision": "प्रभाग चुनें",
+        "selectStateFirst": "पहले राज्य चुनें",
+        "details": "पर्यवेक्षक विवरण",
+        "name": "नाम",
+        "helpline": "हेल्पलाइन",
+        "email": "ईमेल",
+        "callNow": "कॉल करें",
+        "sendEmail": "ईमेल भेजें",
+        "chatTitle": "प्रश्न सहायता",
+        "farmerName": "किसान का नाम",
+        "replyMobile": "उत्तर मोबाइल नंबर",
+        "yourQuery": "आपका प्रश्न (हिंदी/अंग्रेज़ी)",
+        "typeQuestion": "अपना प्रश्न यहाँ लिखें",
+        "micHint": "माइक बटन से बोलकर लिखें। क्रोम ब्राउज़र में सबसे अच्छा काम करता है।",
+        "speak": "बोलें",
+        "stop": "रोकें",
+        "submit": "प्रश्न भेजें",
+        "voiceUnsupported": "यह ब्राउज़र वॉइस टाइपिंग को सपोर्ट नहीं करता।",
+        "submitSuccess": "आपका प्रश्न भेज दिया गया है। पर्यवेक्षक शीघ्र संपर्क करेंगे।",
+        "placeholder": {
+            "farmerName": "अपना नाम दर्ज करें",
+            "mobile": "मोबाइल नंबर दर्ज करें"
+        }
+    },
+    "awareness": {
+        "title": "कृषि जागरूकता",
+        "subtitle": "आधुनिक कृषि तकनीक, सर्वोत्तम प्रथाओं और साथी किसानों की सफलता की कहानियां सीखें।",
+        "showMore": "और दिखाएं",
+        "hideMore": "कम दिखाएं",
+        "relatedVideos": "संबंधित वीडियो",
+        "successStories": "सफलता की कहानियां",
+        "successStoriesSubtitle": "वास्तविक किसान अपनी यात्रा और उपलब्धियां साझा कर रहे हैं",
+        "shareStory": "अपनी सफलता की कहानी साझा करें",
+        "shareStorySubtitle": "YouTube पर अपनी कृषि सफलता साझा करके दूसरों को प्रेरित करें",
+        "youtubeLinkLabel": "YouTube वीडियो लिंक",
+        "youtubeLinkPlaceholder": "https://youtube.com/watch?v=...",
+        "youtubeLinkHelp": "अपना YouTube वीडियो लिंक यहाँ पेस्ट करें। यह एक नियमित वीडियो या YouTube Short हो सकता है।",
+        "submitButton": "कहानी साझा करें",
+        "submitSuccess": "धन्यवाद! आपकी सफलता की कहानी समीक्षा के लिए जमा कर दी गई है।",
+        "cards": {
+            "modernMachinery": {
+                "title": "आधुनिक मशीनरी",
+                "description": "खेती के लिए आसान और कुशल मशीनरी।"
+            },
+            "modernCrops": {
+                "title": "आधुनिक फसलें",
+                "description": "ड्रैगन फ्रूट और कीवी जैसी आधुनिक फसलें।"
+            },
+            "crossbreeding": {
+                "title": "संकरण और नई किस्में",
+                "description": "रोग प्रतिरोधी और उच्च गुणवत्ता वाली फसलें"
+            },
+            "urbanFarming": {
+                "title": "छत और शहरी खेती",
+                "description": "सीमित स्थान के साथ शहरी क्षेत्रों में खेती।"
+            },
+            "globalTechnologies": {
+                "title": "वैश्विक तकनीकों को अपनाना",
+                "description": "दुनिया की उन्नत खेती तकनीकें"
+            },
+            "digitalFarming": {
+                "title": "डिजिटल खेती",
+                "description": "सिंचाई, बीज और कीट प्रबंधन में स्मार्ट निगरानी। समय और श्रम बचाता है।"
+            }
+        },
+        "successStoryTitles": {
+            "amazingFarming": "अद्भुत खेती सफलता की कहानी",
+            "modernTechniques": "आधुनिक खेती तकनीक सफलता",
+            "sustainableAgriculture": "टिकाऊ कृषि सफलता"
+        },
+        "successStoryDescriptions": {
+            "amazingFarming": "वास्तविक किसान अपनी अविश्वसनीय यात्रा और उपलब्धियां साझा कर रहे हैं",
+            "modernTechniques": "नई तकनीक ने पारंपरिक खेती को कैसे बदल दिया",
+            "sustainableAgriculture": "पर्यावरण के अनुकूल खेती के तरीके जिन्होंने उत्पादकता बढ़ाई"
+        }
     }
-  }
   ,
   "marketplace": {
     "title": "मार्केटप्लेस",

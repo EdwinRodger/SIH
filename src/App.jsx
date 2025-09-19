@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import FarmerHelpdesk from './pages/FarmerHelpdesk'
+import FarmingAwareness from './pages/FarmingAwareness'
 import Marketplace from './pages/Marketplace'
 
 /**
@@ -25,8 +26,12 @@ function App() {
                 {/* FarmerHelpdesk route */}
                 <Route path="/farmers-helpdesk" element={<FarmerHelpdesk />} />
 
+                {/* Farming Awareness route */}
+                <Route path="/farming-awareness" element={<FarmingAwareness />} />
+
                 {/* Marketplace route */}
                 <Route path="/marketplace" element={<Marketplace />} />
+
 
                 {/* Catch-all route for 404 */}
                 <Route path="*" element={<Home />} />

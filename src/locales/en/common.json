@@ -8,6 +8,7 @@
     "signup": "Sign Up",
     "logout": "Logout",
     "farmersHelpdesk": "Farmer's Helpdesk",
+    "farmingAwareness": "Farming Awareness",
     "marketplace": "Marketplace"
   },
   "hero": {
@@ -83,37 +84,89 @@
     "contactInfo": "Contact Info",
     "tagline": "Built with ❤️ for Smart India Hackathon"
   },
-  "helpdesk": {
-    "title": "Farmer's Helpdesk",
-    "intro": "Find your division supervisor and reach out instantly, or submit a query below.",
-    "findSupervisor": "Find Your Division Supervisor",
-    "state": "State",
-    "division": "Division",
-    "selectState": "Select State",
-    "selectDivision": "Select Division",
-    "selectStateFirst": "Select State first",
-    "details": "Supervisor Details",
-    "name": "Name",
-    "helpline": "Helpline",
-    "email": "Email",
-    "callNow": "Call Now",
-    "sendEmail": "Send Email",
-    "chatTitle": "Query Support",
-    "farmerName": "Farmer Name",
-    "replyMobile": "Reply Mobile No.",
-    "yourQuery": "Your Query (Hindi/English)",
-    "typeQuestion": "Type your question here",
-    "micHint": "Use the mic button to dictate your query. Works best in Chrome.",
-    "speak": "Speak",
-    "stop": "Stop",
-    "submit": "Submit Query",
-    "voiceUnsupported": "Voice typing is not supported in this browser.",
-    "submitSuccess": "Your query has been submitted. Our supervisor will contact you shortly.",
-    "placeholder": {
-      "farmerName": "Enter your name",
-      "mobile": "Enter mobile number"
+    "helpdesk": {
+        "title": "Farmer's Helpdesk",
+        "intro": "Find your division supervisor and reach out instantly, or submit a query below.",
+        "findSupervisor": "Find Your Division Supervisor",
+        "state": "State",
+        "division": "Division",
+        "selectState": "Select State",
+        "selectDivision": "Select Division",
+        "selectStateFirst": "Select State first",
+        "details": "Supervisor Details",
+        "name": "Name",
+        "helpline": "Helpline",
+        "email": "Email",
+        "callNow": "Call Now",
+        "sendEmail": "Send Email",
+        "chatTitle": "Query Support",
+        "farmerName": "Farmer Name",
+        "replyMobile": "Reply Mobile No.",
+        "yourQuery": "Your Query (Hindi/English)",
+        "typeQuestion": "Type your question here",
+        "micHint": "Use the mic button to dictate your query. Works best in Chrome.",
+        "speak": "Speak",
+        "stop": "Stop",
+        "submit": "Submit Query",
+        "voiceUnsupported": "Voice typing is not supported in this browser.",
+        "submitSuccess": "Your query has been submitted. Our supervisor will contact you shortly.",
+        "placeholder": {
+            "farmerName": "Enter your name",
+            "mobile": "Enter mobile number"
+        }
+    },
+    "awareness": {
+        "title": "Farming Awareness",
+        "subtitle": "Learn modern farming techniques, best practices, and success stories from fellow farmers.",
+        "showMore": "Show More",
+        "hideMore": "Show Less",
+        "relatedVideos": "Related Videos",
+        "successStories": "Success Stories",
+        "successStoriesSubtitle": "Real farmers sharing their journey and achievements",
+        "shareStory": "Share Your Success Story",
+        "shareStorySubtitle": "Inspire others by sharing your farming success on YouTube",
+        "youtubeLinkLabel": "YouTube Video Link",
+        "youtubeLinkPlaceholder": "https://youtube.com/watch?v=...",
+        "youtubeLinkHelp": "Paste your YouTube video link here. It can be a regular video or YouTube Short.",
+        "submitButton": "Share Story",
+        "submitSuccess": "Thank you! Your success story has been submitted for review.",
+        "cards": {
+            "modernMachinery": {
+                "title": "Modern Machinery",
+                "description": "Easy to use and efficient machinery for farming."
+            },
+            "modernCrops": {
+                "title": "Modern Crops",
+                "description": "Modern crops like dragon fruit and kiwi for farming."
+            },
+            "crossbreeding": {
+                "title": "Crossbreeding & New Varieties",
+                "description": "Disease-resistant and high-quality crops"
+            },
+            "urbanFarming": {
+                "title": "Rooftop & Urban Farming",
+                "description": "Farming in urban areas with limited space."
+            },
+            "globalTechnologies": {
+                "title": "Adopting Global Technologies",
+                "description": "Advanced farming techniques of the world"
+            },
+            "digitalFarming": {
+                "title": "Digital Farming",
+                "description": "Smart monitoring in irrigation, seeds, and pest management. Saves time and labor."
+            }
+        },
+        "successStoryTitles": {
+            "amazingFarming": "Amazing Farming Success Story",
+            "modernTechniques": "Modern Farming Techniques Success",
+            "sustainableAgriculture": "Sustainable Agriculture Success"
+        },
+        "successStoryDescriptions": {
+            "amazingFarming": "Real farmer sharing their incredible journey and achievements",
+            "modernTechniques": "How new technology transformed traditional farming",
+            "sustainableAgriculture": "Eco-friendly farming methods that increased productivity"
+        }
     }
-  }
   ,
   "marketplace": {
     "title": "Marketplace",

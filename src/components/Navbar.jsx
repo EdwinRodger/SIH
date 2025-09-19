@@ -51,6 +51,9 @@ function Navbar() {
                             <a className="nav-link" href="#contact">{t('nav.contact')}</a>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link" to="/farming-awareness">{t('nav.farmingAwareness')}</Link>
+                        </li>
+                        <li className="nav-item">
                             <Link className="nav-link" to="/marketplace">{t('nav.marketplace')}</Link>
                         </li>
                     </ul>
