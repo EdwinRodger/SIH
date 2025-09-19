@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 
 /**
  * Home Page Component
- * Main landing page for the FarmConnect website
+ * Main landing page for the KrishiSetu website
  * Contains all major sections: Navbar, Hero, Features, Contact, Footer
  */
 function Home() {

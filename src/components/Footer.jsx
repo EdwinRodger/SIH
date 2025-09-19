@@ -69,7 +69,7 @@ function Footer() {
                             </p>
                             <p className="mb-2">
                                 <i className="fas fa-envelope me-2"></i>
-                                farmconnect@gmail.com
+                                krishisetu@gmail.com
                             </p>
                         </div>
                     </div>

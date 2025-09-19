@@ -1,5 +1,5 @@
 {
-  "brand": "FarmConnect",
+  "brand": "KrishiSetu",
   "nav": {
     "home": "Home",
     "features": "Features",
@@ -10,13 +10,13 @@
     "farmersHelpdesk": "Farmer's Helpdesk"
   },
   "hero": {
-    "title": "Welcome to FarmConnect",
+    "title": "Welcome to KrishiSetu",
     "subtitle": "Revolutionizing agriculture through smart technology. Connect with fellow farmers, access market insights, and grow your farm with our innovative platform.",
     "getStarted": "Get Started",
     "learnMore": "Learn More"
   },
   "features": {
-    "heading": "Why Choose FarmConnect?",
+    "heading": "Why Choose KrishiSetu?",
     "subheading": "Our platform provides everything you need to modernize your farming operations and increase your productivity.",
     "cards": [
       { "title": "Image Disease Detection", "desc": "Detect diseases in your crops with advanced image recognition technology.", "icon": "🔍" },
@@ -61,7 +61,7 @@
     }
   },
   "footer": {
-    "brand": "FarmConnect",
+    "brand": "KrishiSetu",
     "description": "Revolutionizing agriculture through smart technology and connecting farmers for a sustainable future.",
     "quickLinks": "Quick Links",
     "aboutUs": "About Us",

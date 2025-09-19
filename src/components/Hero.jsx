@@ -34,8 +34,8 @@ function Hero() {
                     <div className="col-lg-6">
                         <div className="text-center">
                             <img
-                                src="https://placehold.co/600x400/28a745/ffffff?text=FarmConnect+Hero+Image"
-                                alt="FarmConnect Hero"
+                                src="https://placehold.co/600x400/28a745/ffffff?text=KrishiSetu+Hero+Image"
+                                alt="KrishiSetu Hero"
                                 className="img-fluid rounded shadow"
                             />
                         </div>

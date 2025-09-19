@@ -1,4 +1,4 @@
-# FarmConnect - Smart India Hackathon Project
+# KrishiSetu - Smart India Hackathon Project
 
 A modern React-based farming website prototype built for Smart India Hackathon using React Router v7 and Bootstrap 5.
 
