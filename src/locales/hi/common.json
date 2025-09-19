@@ -51,13 +51,20 @@
     "signup": {
       "title": "साइन अप",
       "name": "पूरा नाम",
+      "number": "मोबाइल नंबर",
       "email": "ईमेल पता",
+      "age": "आयु",
+      "address": "पता",
+      "farmSize": "खेती का आकार (एकड़)",
       "password": "पासवर्ड",
       "confirmPassword": "पासवर्ड की पुष्टि करें",
       "cta": "साइन अप",
       "haveAccount": "क्या आपका पहले से खाता है?",
       "loginHere": "यहाँ लॉगिन करें"
     }
+  },
+  "common": {
+    "optional": "वैकल्पिक"
   },
   "footer": {
     "brand": "फार्मकनेक्ट",

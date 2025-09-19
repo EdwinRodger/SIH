@@ -52,13 +52,20 @@
     "signup": {
       "title": "Sign Up",
       "name": "Full Name",
+      "number": "Mobile Number",
       "email": "Email Address",
+      "age": "Age",
+      "address": "Address",
+      "farmSize": "Farm Size (acres)",
       "password": "Password",
       "confirmPassword": "Confirm Password",
       "cta": "Sign Up",
       "haveAccount": "Already have an account?",
       "loginHere": "Login here"
     }
+  },
+  "common": {
+    "optional": "optional"
   },
   "footer": {
     "brand": "KrishiSetu",

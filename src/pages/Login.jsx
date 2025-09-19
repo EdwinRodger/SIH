@@ -38,9 +38,9 @@ function Login() {
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6 col-lg-4">
-                        <div className="card shadow rounded-5" style={{ border: '1px solid #000' }}>
+                        <div className="card shadow rounded-5 border border-success" style={{ border: '1px solid #000' }}>
                             <div className="card-body p-4">
-                                <h2 className="card-title text-center mb-4" style={{ fontWeight: 1000 }}>{t('auth.login.title')}</h2>
+                                <h2 className="card-title text-center mb-4" style={{ fontWeight: 900 }}>{t('auth.login.title')}</h2>
 
                                 <form onSubmit={handleSubmit}>
                                     <div className="mb-3">
