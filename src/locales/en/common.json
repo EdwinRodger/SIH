@@ -7,7 +7,8 @@
     "login": "Login",
     "signup": "Sign Up",
     "logout": "Logout",
-    "farmersHelpdesk": "Farmer's Helpdesk"
+    "farmersHelpdesk": "Farmer's Helpdesk",
+    "marketplace": "Marketplace"
   },
   "hero": {
     "title": "Welcome to KrishiSetu",
@@ -111,6 +112,66 @@
     "placeholder": {
       "farmerName": "Enter your name",
       "mobile": "Enter mobile number"
+    }
+  }
+  ,
+  "marketplace": {
+    "title": "Marketplace",
+    "subtitle": "Browse and create listings. Expired items auto-delist.",
+    "tabs": {
+      "all": "All",
+      "mine": "My Listings",
+      "history": "History"
+    },
+    "filters": {
+      "search": "Search keywords",
+      "category": "All categories",
+      "minPrice": "Min price",
+      "maxPrice": "Max price",
+      "city": "City",
+      "state": "State",
+      "distance": "Distance (km)",
+      "useMyLocation": "Use my location",
+      "reset": "Reset",
+      "createListing": "Create Listing"
+    },
+    "empty": "No listings to show.",
+    "card": {
+      "expires": "Expires:",
+      "whatsapp": "WhatsApp",
+      "call": "Call",
+      "noImageAlt": "No image available",
+      "noImageText": "No Image"
+    },
+    "modal": {
+      "title": "Create Listing",
+      "labels": {
+        "title": "Title",
+        "category": "Category",
+        "price": "Price",
+        "currency": "Currency",
+        "description": "Description",
+        "city": "City",
+        "state": "State",
+        "phone": "Phone",
+        "whatsapp": "WhatsApp",
+        "expiryDays": "Expiry (days)"
+      },
+      "placeholders": {
+        "title": "e.g., Cold-pressed mustard oil 5L",
+        "selectCategory": "Select category",
+        "price": "e.g., 950",
+        "description": "Short details about the item",
+        "city": "e.g., Jaipur",
+        "state": "e.g., Rajasthan",
+        "phone": "e.g., +91 90000 11111",
+        "whatsapp": "Optional, else uses Phone",
+        "expiryDays": "e.g., 7"
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "add": "Add Listing"
+      }
     }
   }
 }

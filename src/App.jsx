@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import FarmerHelpdesk from './pages/FarmerHelpdesk'
+import Marketplace from './pages/Marketplace'
 
 /**
  * Main App Component
@@ -23,6 +24,9 @@ function App() {
 
                 {/* FarmerHelpdesk route */}
                 <Route path="/farmers-helpdesk" element={<FarmerHelpdesk />} />
+
+                {/* Marketplace route */}
+                <Route path="/marketplace" element={<Marketplace />} />
 
                 {/* Catch-all route for 404 */}
                 <Route path="*" element={<Home />} />
