@@ -37,7 +37,7 @@ function Footer() {
                     </div>
 
                     {/* Support */}
-                    <div className="col-lg-2 col-md-6 mb-4">
+                    {/* <div className="col-lg-2 col-md-6 mb-4">
                         <h6 className="text-success mb-3">{t('footer.support')}</h6>
                         <ul className="list-unstyled">
                             <li className="mb-2">
@@ -53,7 +53,7 @@ function Footer() {
                                 <a href="#" className="text-muted text-decoration-none">{t('footer.terms')}</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     {/* Contact info */}
                     <div className="col-lg-4 mb-4">
