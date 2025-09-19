@@ -283,18 +283,18 @@ function Marketplace() {
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         {displayedListings.map(item => (
                             <div className="col" key={item.id}>
-                                <div className="card h-100 rounded-5">
-                                    <div className="overflow-hidden rounded-top-5" style={{ height: 160 }}>
+                                <div className="card h-100 rounded">
+                                    <div className="overflow-hidden" style={{ height: 160 }}>
                                         {item.images?.[0] ? (
                                             <img
                                                 src={item.images[0]}
-                                                className="card-img-top h-100 w-100 object-fit-cover rounded-top-5"
+                                                className="card-img-top h-100 w-100 object-fit-cover"
                                                 alt={item.title}
                                             />
                                         ) : (
                                             <img
                                                 src={`https://placehold.co/800x500?text=${encodeURIComponent(t('marketplace.card.noImageText'))}`}
-                                                className="card-img-top bg-light h-100 w-100 object-fit-cover rounded-top-5"
+                                                className="card-img-top bg-light h-100 w-100 object-fit-cover"
                                                 alt={t('marketplace.card.noImageAlt')}
                                             />
                                         )}

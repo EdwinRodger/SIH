@@ -53,7 +53,7 @@ function GetInTouch() {
                         </div>
 
                         {/* Contact form */}
-                        <div className="card shadow border-0 rounded-5">
+                        <div className="card shadow border-0 rounded">
                             <div className="card-body p-5">
                                 <form onSubmit={handleSubmit}>
                                     <div className="row">
@@ -63,7 +63,7 @@ function GetInTouch() {
                                             </label>
                                             <input
                                                 type="text"
-                                                className="form-control rounded-5"
+                                                className="form-control rounded"
                                                 id="name"
                                                 name="name"
                                                 value={formData.name}
@@ -79,7 +79,7 @@ function GetInTouch() {
                                             </label>
                                             <input
                                                 type="number"
-                                                className="form-control rounded-5"
+                                                className="form-control rounded"
                                                 id="number"
                                                 name="number"
                                                 value={formData.number}
@@ -107,7 +107,7 @@ function GetInTouch() {
                                     </div>
 
                                     <div className="text-center">
-                                        <button type="submit" className="btn btn-success btn-lg px-5 rounded-5">
+                                        <button type="submit" className="btn btn-success btn-lg px-5 rounded">
                                             {t('contact.submit')}
                                         </button>
                                     </div>
