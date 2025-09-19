@@ -20,7 +20,7 @@ function Marketplace() {
             title: 'Paddy Husk - 50kg bags',
             category: 'Paddy Husk',
             price: 450,
-            currency: 'INR',
+            currency: '₹',
             condition: 'New',
             description: 'Clean and dry paddy husk suitable for bedding and fuel.',
             location: { city: 'Lucknow', state: 'UP', lat: 26.8467, lon: 80.9462 },
@@ -34,7 +34,7 @@ function Marketplace() {
             title: 'Sugarcane Bagasse bales',
             category: 'Sugarcane Bagasse',
             price: 1200,
-            currency: 'INR',
+            currency: '₹',
             condition: 'Used',
             description: 'Well-pressed bagasse bales ideal for biofuel.',
             location: { city: 'Pune', state: 'MH', lat: 18.5204, lon: 73.8567 },
@@ -48,7 +48,7 @@ function Marketplace() {
             title: 'Cold-pressed mustard oil 5L',
             category: 'Cold-pressed oils',
             price: 950,
-            currency: 'INR',
+            currency: '₹',
             condition: 'New',
             description: 'Wooden ghani cold-pressed, unrefined, 5L can.',
             location: { city: 'Jaipur', state: 'RJ', lat: 26.9124, lon: 75.7873 },
@@ -62,7 +62,7 @@ function Marketplace() {
             title: 'Wheat Straw / Parali - loose',
             category: 'Wheat Straw / Parali',
             price: 300,
-            currency: 'INR',
+            currency: '₹',
             condition: 'Used',
             description: 'Loose straw collected post-harvest. Pickup preferred.',
             location: { city: 'Karnal', state: 'HR', lat: 29.6857, lon: 76.9905 },
@@ -94,12 +94,6 @@ function Marketplace() {
     ]
     const [search, setSearch] = useState('')
     const [category, setCategory] = useState('')
-    const [minPrice, setMinPrice] = useState('')
-    const [maxPrice, setMaxPrice] = useState('')
-    const [city, setCity] = useState('')
-    const [stateName, setStateName] = useState('')
-    const [distanceKm, setDistanceKm] = useState('')
-    const [userLocation, setUserLocation] = useState(null)
 
     // Create-listing modal/form state
     const [isCreateOpen, setIsCreateOpen] = useState(false)
@@ -107,7 +101,7 @@ function Marketplace() {
         title: '',
         category: '',
         price: '',
-        currency: 'INR',
+        currency: '₹',
         description: '',
         city: '',
         state: '',
@@ -202,32 +196,10 @@ function Marketplace() {
         if (category) {
             result = result.filter(l => l.category === category)
         }
-        if (minPrice !== '') {
-            const v = Number(minPrice)
-            if (!Number.isNaN(v)) result = result.filter(l => Number(l.price) >= v)
-        }
-        if (maxPrice !== '') {
-            const v = Number(maxPrice)
-            if (!Number.isNaN(v)) result = result.filter(l => Number(l.price) <= v)
-        }
-        if (city.trim()) {
-            const c = city.toLowerCase()
-            result = result.filter(l => (l.location.city || '').toLowerCase().includes(c))
-        }
-        if (stateName.trim()) {
-            const s = stateName.toLowerCase()
-            result = result.filter(l => (l.location.state || '').toLowerCase().includes(s))
-        }
-        if (distanceKm && userLocation) {
-            const maxD = Number(distanceKm)
-            if (!Number.isNaN(maxD) && maxD > 0) {
-                result = result.filter(l => measureDistanceKm(userLocation, l.location) <= maxD)
-            }
-        }
         return result
     }
 
-    const filteredListings = useMemo(() => getFilteredListings(activeListings), [activeListings, search, category, minPrice, maxPrice, city, stateName, distanceKm, userLocation])
+    const filteredListings = useMemo(() => getFilteredListings(activeListings), [activeListings, search, category])
 
     // Choose which listings to show for the current tab
     const displayedListings = useMemo(() => {
@@ -237,28 +209,10 @@ function Marketplace() {
         return listings.filter(l => new Date(l.expiryDate).getTime() <= new Date(nowIso).getTime() && l.ownerId === userId)
     }, [activeTab, filteredListings, userId, listings, nowIso])
 
-    // Ask browser for current location (optional, used for distance filter)
-    function handleUseMyLocation() {
-        if (!navigator.geolocation) return
-        navigator.geolocation.getCurrentPosition(
-            pos => {
-                setUserLocation({ lat: pos.coords.latitude, lon: pos.coords.longitude })
-            },
-            () => {
-                // silently ignore
-            }
-        )
-    }
 
     function resetFilters() {
         setSearch('')
         setCategory('')
-        setCondition('')
-        setMinPrice('')
-        setMaxPrice('')
-        setCity('')
-        setStateName('')
-        setDistanceKm('')
     }
 
     function openCreate() { setIsCreateOpen(true) }
@@ -277,7 +231,7 @@ function Marketplace() {
             price: Number(form.price),
             currency: form.currency || 'INR',
             description: form.description || '',
-            location: { city: form.city, state: form.state, lat: userLocation?.lat || 0, lon: userLocation?.lon || 0 },
+            location: { city: form.city, state: form.state, lat: 0, lon: 0 },
             images: [],
             seller: { name: 'You', phone: form.phone || '', whatsapp: form.whatsapp || form.phone || '' },
             ownerId: userId,
@@ -286,7 +240,7 @@ function Marketplace() {
         }
         setListings(prev => [newItem, ...prev])
         setIsCreateOpen(false)
-        setForm({ title: '', category: '', price: '', currency: 'INR', description: '', city: '', state: '', phone: '', whatsapp: '', expiryDays: '7' })
+        setForm({ title: '', category: '', price: '', currency: '₹', description: '', city: '', state: '', phone: '', whatsapp: '', expiryDays: '7' })
     }
 
     return (
@@ -314,23 +268,7 @@ function Marketplace() {
                             {categories.map(c => <option key={c} value={c}>{c}</option>)}
                         </select>
                     </div>
-                    <div className="col-6 col-md-3 col-lg-2">
-                        <input className="form-control" type="number" placeholder={t('marketplace.filters.minPrice')} value={minPrice} onChange={e => setMinPrice(e.target.value)} />
-                    </div>
-                    <div className="col-6 col-md-3 col-lg-2">
-                        <input className="form-control" type="number" placeholder={t('marketplace.filters.maxPrice')} value={maxPrice} onChange={e => setMaxPrice(e.target.value)} />
-                    </div>
-                    <div className="col-6 col-md-3 col-lg-2">
-                        <input className="form-control" placeholder={t('marketplace.filters.city')} value={city} onChange={e => setCity(e.target.value)} />
-                    </div>
-                    <div className="col-6 col-md-3 col-lg-2">
-                        <input className="form-control" placeholder={t('marketplace.filters.state')} value={stateName} onChange={e => setStateName(e.target.value)} />
-                    </div>
-                    <div className="col-6 col-md-3 col-lg-2">
-                        <input className="form-control" type="number" placeholder={t('marketplace.filters.distance')} value={distanceKm} onChange={e => setDistanceKm(e.target.value)} />
-                    </div>
                     <div className="col-6 col-md-6 col-lg-4 d-flex gap-2">
-                        <button onClick={handleUseMyLocation} className="btn btn-outline-secondary w-100">{t('marketplace.filters.useMyLocation')}</button>
                         <button onClick={resetFilters} className="btn btn-outline-secondary w-100">{t('marketplace.filters.reset')}</button>
                     </div>
                     <div className="col-12 col-lg-4 d-flex justify-content-lg-end">
@@ -363,16 +301,26 @@ function Marketplace() {
                                     </div>
                                     <div className="card-body d-flex flex-column">
                                         <div className="d-flex justify-content-between mb-2">
-                                            <strong>{item.currency} {item.price}</strong>
+                                            <strong className="h4">{item.title}</strong>
                                             <span className="text-muted small">{item.category}</span>
                                         </div>
-                                        <div className="h6 mb-2">{item.title}</div>
+                                        <div className="h6 mb-2">₹{item.price}</div>
                                         <div className="text-muted small mb-3">{item.location.city}, {item.location.state}</div>
                                         <div className="d-flex gap-2 mt-auto">
                                             <a href={`https://wa.me/${(item.seller.whatsapp || '').replace(/[^0-9]/g, '')}`} target="_blank" rel="noreferrer" className="btn btn-outline-success btn-sm">{t('marketplace.card.whatsapp')}</a>
                                             <a href={`tel:${item.seller.phone}`} className="btn btn-outline-primary btn-sm">{t('marketplace.card.call')}</a>
                                         </div>
-                                        <div className="text-muted small mt-2">{t('marketplace.card.expires')} {new Date(item.expiryDate).toLocaleDateString()}</div>
+                                        <div className="text-muted small mt-2">
+                                            {t('marketplace.card.expires')}{' '}
+                                            {(() => {
+                                                const d = new Date(item.expiryDate);
+                                                const day = String(d.getDate()).padStart(2, '0');
+                                                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                                                const month = monthNames[d.getMonth()];
+                                                const year = d.getFullYear();
+                                                return `${day} ${month} ${year}`;
+                                            })()}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -404,15 +352,12 @@ function Marketplace() {
                                                         {categories.map(c => <option key={c} value={c}>{c}</option>)}
                                                     </select>
                                                 </div>
-                                                <div className="col-6 col-md-4">
+                                                <div className="col-12 col-md-6">
                                                     <label className="form-label">{t('marketplace.modal.labels.price')}</label>
-                                                    <input required type="number" className="form-control" placeholder={t('marketplace.modal.placeholders.price')} value={form.price} onChange={e => updateForm('price', e.target.value)} />
-                                                </div>
-                                                <div className="col-6 col-md-2">
-                                                    <label className="form-label">{t('marketplace.modal.labels.currency')}</label>
-                                                    <select className="form-select" value={form.currency} onChange={e => updateForm('currency', e.target.value)}>
-                                                        <option value="INR">INR</option>
-                                                    </select>
+                                                    <div className="input-group">
+                                                        <span className="input-group-text">₹</span>
+                                                        <input required type="number" className="form-control" placeholder={t('marketplace.modal.placeholders.price')} value={form.price} onChange={e => updateForm('price', e.target.value)} />
+                                                    </div>
                                                 </div>
                                                 <div className="col-12">
                                                     <label className="form-label">{t('marketplace.modal.labels.description')}</label>
